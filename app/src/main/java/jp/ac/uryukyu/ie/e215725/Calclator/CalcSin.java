@@ -2,19 +2,16 @@ package jp.ac.uryukyu.ie.e215725.Calclator;
 
 import jp.ac.uryukyu.ie.e215725.Settings.Calc;
 
-public class CalcSin implements Calc{
-    public double theta;        //角度
-    public double radian;       //ラジアン
+public class CalcSin extends Trigonometric implements Calc{
     public double sin;          //サイン
 
     /**
      * コンストラクタ
-     * 入力された角度をラジアンに変換する
+     * スーパークラス(Trigonometric)を継承する
      * @param _theta ユーザーが入力した角度
      */
     public CalcSin(double _theta){
-        this.theta = _theta;
-        this.radian = Math.toRadians(this.theta);
+        super(_theta);
     }
 
     /**
