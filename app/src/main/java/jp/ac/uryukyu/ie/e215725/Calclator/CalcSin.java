@@ -16,7 +16,7 @@ public class CalcSin extends Trigonometric implements Calc{
 
     /**
      * calcメソッドのオーバーライド
-     * Sinを求めるメソッドの実行結果を出力する
+     * サインを求めるメソッドの実行結果を出力する
      */
     @Override
     public void calc(){

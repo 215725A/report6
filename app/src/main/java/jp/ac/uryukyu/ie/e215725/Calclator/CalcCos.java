@@ -16,7 +16,7 @@ public class CalcCos extends Trigonometric implements Calc{
 
     /**
      * calcメソッドのオーバーライド
-     * Cosを求めるメソッドの実行結果を出力する
+     * コサインを求めるメソッドの実行結果を出力する
      */
     @Override
     public void calc(){
@@ -24,7 +24,7 @@ public class CalcCos extends Trigonometric implements Calc{
     }
 
     /**
-     * Cosを求めるメソッド
+     * コサインの値を求めるメソッド
      * @return cos(radian)の値
      */
     public double calcCos(){
