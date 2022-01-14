@@ -1,6 +1,7 @@
 package jp.ac.uryukyu.ie.e215725;
 
 import java.util.*;
+
 import jp.ac.uryukyu.ie.e215725.Calclator.*;
 import jp.ac.uryukyu.ie.e215725.Settings.*;
 
@@ -12,6 +13,7 @@ public class Main {
         double index;   //指数
         double radix;   //基数
         double theta;   //角度
+
         System.out.println("計算方法を選択してください");
         System.out.println("0: 加算 1: 減算 2: 掛算 3: 除算 4: 累乗 5: 階乗");
         System.out.println("6: 平方根 7: Sin 8: Cos 9: Tan 10: 10進数 -> 2進数");
@@ -19,25 +21,25 @@ public class Main {
 
         switch (command) {
             case 0:
-                doubleData = dataSetDouble(doubleData);
+                doubleData = DataSet.dataSetDouble(doubleData);
                 Calc add = new CalcAdd(doubleData);
                 add.calc();
                 add.printResultDouble();
                 break;
             case 1:
-                doubleData = dataSetDouble(doubleData);
+                doubleData = DataSet.dataSetDouble(doubleData);
                 Calc subtract = new CalcSubtract(doubleData);
                 subtract.calc();
                 subtract.printResultDouble();
                 break;
             case 2:
-                doubleData = dataSetDouble(doubleData);
+                doubleData = DataSet.dataSetDouble(doubleData);
                 Calc multiple = new CalcMultiple(doubleData);
                 multiple.calc();
                 multiple.printResultDouble();
                 break;
             case 3:
-                doubleData = dataSetDouble(doubleData);
+                doubleData = DataSet.dataSetDouble(doubleData);
                 Calc division = new CalcDivision(doubleData);
                 division.calc();
                 division.printResultDouble();
@@ -92,22 +94,14 @@ public class Main {
                 Calc binary = new CalcBinary(intData);
                 binary.calc();
                 binary.printResultInteger();
+                break;
+            default:
+                System.out.println("1~10までの値を入力してください");
+                break;
                 
         }
         s.close();
 
-    }
-
-    static ArrayList<Double> dataSetDouble(ArrayList<Double> doubleData) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("データの数は何個ですか");
-        int count = scan.nextInt();
-        for (int num = 0; num < count; num++) {
-            System.out.printf("%d個目の値を入力\n", num + 1);
-            doubleData.add((double) scan.nextInt());
-        }
-        scan.close();
-        return doubleData;
     }
 
 }
