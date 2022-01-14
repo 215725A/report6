@@ -2,34 +2,24 @@ package jp.ac.uryukyu.ie.e215725.Calclator;
 
 import jp.ac.uryukyu.ie.e215725.Settings.Calc;
 
-public class CalcCos extends Trigonometric implements Calc{
-    public double cos;      //コサイン
+public class CalcCos extends Calc{
+    public double theta; //角度
 
     /**
      * コンストラクタ
-     * スーパークラス(Trigonometric)を継承
-     * @param _theta
+     * @param _theta //ユーザーが入力した角度
      */
     public CalcCos(double _theta){
-        super(_theta);
+        this.theta = _theta;
     }
 
     /**
      * calcメソッドのオーバーライド
-     * コサインを求めるメソッドの実行結果を出力する
+     * コサインの値を計算するメソッド
      */
     @Override
     public void calc(){
-        System.out.println(calcCos());
-    }
-
-    /**
-     * コサインの値を求めるメソッド
-     * @return cos(radian)の値
-     */
-    public double calcCos(){
-        cos = Math.cos(this.theta);
-        return cos;
+        resultOfDouble = Math.cos(Trigonometric.changeToRadian(theta));
     }
     
 }
