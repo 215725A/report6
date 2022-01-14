@@ -11,9 +11,9 @@ public class CalcPower extends Calc{
      * @param _radix   //ユーザーが入力した基数
      * @param _index    //ユーザーが入力した指数
      */
-    public CalcPower(double _radix, double _inputindex){
+    public CalcPower(double _radix, double _index){
         this.radix = _radix;
-        this.index = _inputindex;
+        this.index = _index;
     }
 
     /**

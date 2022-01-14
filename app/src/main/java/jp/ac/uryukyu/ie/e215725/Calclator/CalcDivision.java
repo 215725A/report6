@@ -8,8 +8,7 @@ public class CalcDivision extends Calc{
 
     /**
      * コンストラクタ
-     * @param _value1 ユーザーが入力した割られる数
-     * @param _value2 ユーザーが入力した割る数
+     * @param _doubleData //除算をしたい数のリスト
      */
     public CalcDivision(ArrayList<Double> _doubleData){
         this.doubleData = _doubleData;
