@@ -21,11 +21,11 @@ public class CalcSubtract extends Calc{
      */
     @Override
     public void calc(){
-        for(int num = 0; num < doubleData.size(); num++){
-            if(num == 0){
-                resultOfDouble = doubleData.get(num);
+        for(int index = 0; index < doubleData.size(); index++){
+            if(index == 0){
+                resultOfDouble = doubleData.get(index);
             }else{
-                resultOfDouble -= doubleData.get(num);
+                resultOfDouble -= doubleData.get(index);
             }
         }
     }

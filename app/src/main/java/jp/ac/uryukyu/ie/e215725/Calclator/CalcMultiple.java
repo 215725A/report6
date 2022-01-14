@@ -1,7 +1,7 @@
 package jp.ac.uryukyu.ie.e215725.Calclator;
 
 import jp.ac.uryukyu.ie.e215725.Settings.Calc;
-import java.util.*;
+import java.util.ArrayList;
 
 public class CalcMultiple extends Calc{
     public ArrayList<Double> doubleData;    //掛け算をしたい数のリスト
