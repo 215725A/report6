@@ -1,34 +1,30 @@
 package jp.ac.uryukyu.ie.e215725.Calclator;
 
+import java.util.ArrayList;
+
 import jp.ac.uryukyu.ie.e215725.Settings.Calc;
 
-public class CalcAdd implements Calc{
-    public double value1;       //足される数
-    public double value2;       //足す数
+public class CalcAdd extends Calc {
+    private ArrayList<Double> doubleData; // 足したい数のリスト
 
-    /** 
+    /**
      * コンストラクター
-     * @param _value1 引数1
-     * @param _value2 引数2
+     * 
+     * @param _doubleData 足し算をしたい数のリスト
      */
-    public CalcAdd(double _value1, double _value2){
-        this.value1 = _value1;
-        this.value2 = _value2;
+    public CalcAdd(ArrayList<Double> _doubleData) {
+        this.doubleData = _doubleData;
     }
 
     /**
-     * 計算結果を出力する
+     * リストの中身を足していくメソッド
+     * calcメソッドのオーバーライド
      */
     @Override
-    public void calc(){
-        System.out.println(calcAdd());
+    public void calc() {
+        for (var num : this.doubleData) {
+            resultOfDouble += num;
+        }
     }
 
-    /**
-     * 値1と値2の足し算を行うメソッド
-     * @return 値1と値2の和
-     */
-    public double calcAdd(){
-        return this.value1 + this.value2;
-    }
 }

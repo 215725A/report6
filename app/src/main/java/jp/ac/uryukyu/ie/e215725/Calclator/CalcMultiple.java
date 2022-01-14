@@ -1,36 +1,30 @@
 package jp.ac.uryukyu.ie.e215725.Calclator;
 
 import jp.ac.uryukyu.ie.e215725.Settings.Calc;
+import java.util.*;
 
-public class CalcMultiple implements Calc{
-    public double value1;       //掛けられる数
-    public double value2;       //掛ける数
+public class CalcMultiple extends Calc{
+    public ArrayList<Double> doubleData;    //掛け算をしたい数のリスト
 
     /**
      * コンストラクタ
-     * @param _value1 ユーザーが入力した掛けられる数
-     * @param _value2 ユーザーが入力した掛ける数
+     * @param _doubleData 掛け算をしたい数のリスト
      */
-    public CalcMultiple(double _value1, double _value2){
-        this.value1 = _value1;
-        this.value2 = _value2;
+    public CalcMultiple(ArrayList<Double> _doubleData){
+        this.doubleData = _doubleData;
     }
 
     /**
      * calcメソッドのオーバーライド
-     * 掛け算を行うメソッドを呼び出して結果を出力する
+     * リストの中身を掛け算していく
+     * 初期値として1を与える(0に何をかけても0になるため)
      */
     @Override
     public void calc(){
-        System.out.println(calcMultiple());
-    }
-
-    /**
-     * 掛け算を行うメソッド
-     * @return フィールド変数value1とvalue2を掛けた値を返す
-     */
-    public double calcMultiple(){
-        return this.value1 * this.value2;
+        resultOfDouble = 1;
+        for(var num : doubleData){
+            resultOfDouble *= num;
+        }
     }
     
 }
