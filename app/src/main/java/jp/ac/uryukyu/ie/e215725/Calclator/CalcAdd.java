@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import jp.ac.uryukyu.ie.e215725.Settings.Calc;
 
 public class CalcAdd extends Calc {
-    private ArrayList<Double> doubleData; // 足したい数のリスト
+    public ArrayList<Double> doubleData; // 足したい数のリスト
 
     /**
      * コンストラクター
